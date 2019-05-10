@@ -1,0 +1,11 @@
+* text=auto
+
+* text eol=lf
+*.css eol=crlf
+*.html eol=crlf
+*.mp4 binary
+*.ttf eol=lf
+*.svg binary
+*.jpg binary
+*.png binary
+*.gif binary

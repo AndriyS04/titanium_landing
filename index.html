@@ -6,90 +6,144 @@
     <title>Titanium Shoes</title>
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300i,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <div class="logo">TITANIUM <span class="copied">&#x00ae</span></div>
-        <div class="contact-block"><a href="" class="contact-phone"></a><a href="" class="contact-btn call-me-btn"></a></div>
+        <div class="container">
+            <div class="logo"> <img src="img/logo.png" alt="Titanium">
+                <!--TITANIUM <sub class="copied">&#x00ae</sub>-->
+            </div>
+            <div class="contact-block"> <a href="" class="contact-phone">+7 (499) 686 12 87</a> <a href="" class="order-btn call-me-btn">ПЕРЕЗВОНИТЕ МНЕ!</a> </div>
+        </div>
     </header>
     <main>
-    	<section class="first-section">
-    		<p class="last-chance-p">ПОСЛЕДНЯЯ ВОЗМОЖНОСТЬ</p>
-    		<div class="timer-block"></div>
-    		<p class="first-section-p">осталось уже только Несколько последних пар защитных кроссовок в наличии их точно разберут в ближайшее время</p>
-    		<div class="first-section-slogan">
-    			<p class="first-section-p">Успей заказать себе пару, по цене в 2 раза ниже обычной!</p>
-    			<p class="first-section-p">используй промокод <span class="promo-code">TITAN1</span> на 1000 рублей</p>
-    		</div>
-    	</section>
-    	<section class="second-section">
-    		<div class="video-block"></div>
-    		<a href="" class="order-btn">Заказать себе, пару по уникальной цене</a>
-    		<p class="second-section__price">ВСЕГО ЗА 5499 &#x20bd</p>
-    	</section>
-    	<section class="third-section reviews-section">
-    		<p class="reviews-section-heading">Сомневаешся в их удобстве и уровне защиты?</p>
-    		<p class="reviews-section-second-heading">Посмотри,что говорят те, кто уже купил кроссовки Titan</p>
-    		<div class="reviews-block">
-    			<div class="reviews-block__video-column"></div>
-    			<div class="reviews-block__review-column">
-    				<p class="review-column_name"></p>
-    				<p class="review-column_years"></p>
-    				<p class="review-column_review"></p>
-    			</div>
-    			<div class="reviews-block__video-column"></div>
-    			<div class="reviews-block__review-column">
-    				<p class="review-column_name"></p>
-    				<p class="review-column_years"></p>
-    				<p class="review-column_review"></p>
-    			</div>
-    			<div class="reviews-block__video-column"></div>
-    			<div class="reviews-block__review-column">
-    				<p class="review-column_name"></p>
-    				<p class="review-column_years"></p>
-    				<p class="review-column_review"></p>
-    			</div>
-    			<div class="reviews-block__video-column"></div>
-    			<div class="reviews-block__review-column">
-    				<p class="review-column_name"></p>
-    				<p class="review-column_years"></p>
-    				<p class="review-column_review"></p>
-    			</div>
-    			<div class="reviews-block__video-column"></div>
-    			<div class="reviews-block__review-column">
-    				<p class="review-column_name"></p>
-    				<p class="review-column_years"></p>
-    				<p class="review-column_review"></p>
-    			</div>
-    			<div class="reviews-block__video-column"></div>
-    			<div class="reviews-block__review-column">
-    				<p class="review-column_name"></p>
-    				<p class="review-column_years"></p>
-    				<p class="review-column_review"></p>
-    			</div>
-    		</div>
-    		<a href="" class="order-btn">Заказать себе, пару по уникальной цене</a>
-    	</section>
-    	<section class="fourth-section functions-section">
-    		<img src="img/functions.jpg" alt="" class="functions-img">
-    		<div class="functions-section-container">
-    			<div class="functionals-block-column">
-    				<p class="functionals-block-p">ФУНКЦИОНАЛЬНОСТЬ</p>
-    				<p class="protection">Обеспечивает защиту</p>
-    			</div>
-    			<div class="order-column">
-    				<a href="" class="order-btn">Заказать!</a>
-    			</div>
-    		</div>
-    	</section>
+        <section class="first-section">
+            <div class="container">
+                <p class="last-chance-p">ПОСЛЕДНЯЯ ВОЗМОЖНОСТЬ</p>
+                <div class="timer-block">
+                    <div class="timer_box">
+                        <div class="timer-wrap">
+                            <div class="timer">
+                                <div class="digitHolder timer-2d">
+                                    <div class="timer-text">дни </div>
+                                    <div class="digitNumbers">
+                                        <div class="digit timer-hrs1">0</div>
+                                        <div class="digit timer-hrs2">0</div>
+                                    </div>
+                                </div>
+                                <div class="digitHolder timer-2d">
+                                    <div class="timer-text">минуты </div>
+                                    <div class="digitNumbers">
+                                        <div id="timer-min" class="digit timer-min1">3</div>
+                                        <div class="digit timer-min2">8</div>
+                                    </div>
+                                </div>
+                                <div class="digitHolder timer-2d">
+                                    <div class="timer-text">секунды</div>
+                                    <div class="digitNumbers">
+                                        <div class="digit timer-sec1">4</div>
+                                        <div class="digit timer-sec2">6</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <br>
+                    </div>
+                </div>
+                <p class="first-section-p">осталось уже только Несколько последних пар защитных кроссовок в наличии их точно разберут в ближайшее время</p>
+                <p class="first-section-slogan"><span class="first-line">Успей заказать себе пару,</span> по цене в 2 раза ниже обычной!</p>
+                <p class="first-section-p promo-p">используй промокод <span class="promo-code">TITAN1</span> на 1000 рублей</p>
+            </div>
+        </section>
+        <section class="second-section">
+            <div class="container">
+                <div class="video-block"> <video class="main-video" src="img/Official.mp4" poster="img/video-poster.jpg" onclick="this.paused?this.play():this.pause();"></video> </div> <a href="" class="order-btn">Заказать себе, пару по уникальной цене</a>
+                <p class="second-section__price">ВСЕГО ЗА 5499 &#x20bd</p>
+            </div>
+        </section>
+        <section class="third-section reviews-section">
+            <div class="container">
+                <p class="reviews-section-heading">Сомневаешся в их удобстве и уровне защиты?</p>
+                <p class="reviews-section-second-heading">Посмотри,что говорят те, кто уже купил кроссовки Titan</p>
+                <div class="reviews-block">
+                    <div class="reviev-1 review">
+                        <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/reviev-1-poster.jpg">
+                                <source src="" type="video/mp4">
+                                <source src="" type="video/ogg"> </video> </div>
+                        <div class="reviews-block__review-column">
+                            <p class="review-column_name">Александр Знак</p>
+                            <p class="review-column_years">42 года</p>
+                            <p class="review-column_review">Отлично подходит для повседневной носки! Я работаю по 12 часов в сутки, и мне нужна была обувь, которая была бы удобной и защитной!</p>
+                        </div>
+                    </div>
+                    <div class="reviev-2 review">
+                        <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/reviev-2-poster.jpg">
+                                <source src="" type="video/mp4">
+                                <source src="" type="video/ogg"> </video> </div>
+                        <div class="reviews-block__review-column">
+                            <p class="review-column_name">Иван Федоров</p>
+                            <p class="review-column_years">58 лет</p>
+                            <p class="review-column_review">Обувь со стальным носком, которую я раньше носил, была тяжелой и неудобной. Но эта обувь отличается от предыдущей. Она отлично сидит на ноге и очень удобная.</p>
+                        </div>
+                    </div>
+                    <div class="reviev-3 review">
+                        <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/reviev-3-poster.jpg">
+                                <source src="" type="video/mp4">
+                                <source src="" type="video/ogg"> </video> </div>
+                        <div class="reviews-block__review-column">
+                            <p class="review-column_name">Анастасия Гринюк</p>
+                            <p class="review-column_years">36 лет</p>
+                            <p class="review-column_review">Я женщина, купила обувь, потому что дешевая и необычная. Она реально крутая, на работе не устаю и ноги дышат. Рекомендую.</p>
+                        </div>
+                    </div>
+                    <div class="reviev-4 review">
+                        <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/reviev-4-poster.jpg">
+                                <source src="" type="video/mp4">
+                                <source src="" type="video/ogg"> </video> </div>
+                        <div class="reviews-block__review-column">
+                            <p class="review-column_name">Борис Лаптинский</p>
+                            <p class="review-column_years">30 лет</p>
+                            <p class="review-column_review">Эта обувь ПОТРЯСАЮЩАЯ!!! Когда я надел ее в первый раз, то носил ее целый день, не снимая. Нога не устает. ЛУЧШАЯ защитная обувь, которую я когда-либо носил. Закажу еще одну пару!</p>
+                        </div>
+                    </div>
+                    <div class="reviev-5 review">
+                        <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/reviev-5-poster.jpg">
+                                <source src="" type="video/mp4">
+                                <source src="" type="video/ogg"> </video> </div>
+                        <div class="reviews-block__review-column">
+                            <p class="review-column_name">Саша Кино</p>
+                            <p class="review-column_years">44 года</p>
+                            <p class="review-column_review">Работаю на автосервисе. Купил себе эту обувь и безумно рад. Нога дышит легко - после старых ботинок.</p>
+                        </div>
+                    </div>
+                    <div class="reviev-6 review">
+                        <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/reviev-6-poster.jpg">
+                                <source src="" type="video/mp4">
+                                <source src="" type="video/ogg"> </video> </div>
+                        <div class="reviews-block__review-column">
+                            <p class="review-column_name">Оксана Белицкая</p>
+                            <p class="review-column_years">32 года</p>
+                            <p class="review-column_review">Купила для себя эти кросовки и ни очем не жалею. Ноге удобно, легко и даже в жару не потеют. Советую теперь всем друзьям!!!</p>
+                        </div>
+                    </div>
+                </div> <a href="" class="order-btn">Заказать себе, пару по уникальной цене</a>
+            </div>
+        </section>
+        <section class="fourth-section functions-section"> <img src="img/functions.jpg" alt="" width="1300" height="auto" class="functions-img">
+            <div class="functions-section-container">
+                <div class="functionals-block-column">
+                    <p class="functionals-block-p">ФУНКЦИОНАЛЬНОСТЬ</p>
+                    <p class="protection">Обеспечивает защиту</p>
+                </div>
+                <div class="order-column"> <a href="" class="order-btn">Заказать!</a> </div>
+            </div>
+        </section>
     </main>
     <footer>
-        <p class="credits">
-            © 2019 titanium shoes
-        </p>
+        <p class="credits"> © 2019 titanium shoes </p>
         <div class="payment_methods"> <svg class="payment-icon" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24" width="38" height="24" aria-labelledby="pi-american_express">
                 <title id="pi-american_express">American Express</title>
                 <path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" fill="#000" opacity=".07"></path>
@@ -162,99 +216,58 @@
                 <path d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z" fill="#142688"></path>
             </svg></div>
     </footer>
-
     <div class="cart-popup hide-block">
-    	<div class="cart-overlay">
-    		<div class="cart-tabs-block">
-    			<div class="tab-1 cart-tab">
-    				<p class="tab-num">1</p>
-    				<p class="tab-description">Выберите модель</p>
-    			</div>
-    			<div class="tab-1 cart-tab">
-    				<p class="tab-num">2</p>
-    				<p class="tab-description">Выберите размер</p>
-    			</div>
-    			<div class="tab-1 cart-tab">
-    				<p class="tab-num">3</p>
-    				<p class="tab-description">Укажите адрес доставки</p>
-    			</div>
-    		</div>
-    		<div class="cart-block">
-    			<form action="#" method="post">
-    				<div class="slider-block">
-    						
-    				</div>
-						<div class="step-1">
-							<label class="model-choose"><input type="radio" class="model-choose-input" name="model" value="1"></label>
-							<label class="model-choose"><input type="radio" class="model-choose-input" name="model" value="2" checked=""></label>
-							<label class="model-choose"><input type="radio" class="model-choose-input" name="model" value="3"></label>
-							<label class="model-choose"><input type="radio" class="model-choose-input" name="model" value="4"></label>
-							<label class="model-choose"><input type="radio" class="model-choose-input" name="model" value="5"></label>
-							<label class="model-choose"><input type="radio" class="model-choose-input" name="model" value="6"></label>
-						</div>
-						<a href="" class="order-btn">Выберите свой размер</a>
-						<div class="step-2">
-							<label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="38"></label>
-							<label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="39"></label>
-							<label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="39.5"></label>
-							<label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="40"></label>
-							<label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="40.5"></label>
-							<label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="41"></label>
-							<label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="41.5"></label>
-							<label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="42" checked=""></label>
-							<label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="42.5"></label>
-							<label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="43"></label>
-							<label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="43.5"></label>
-							<label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="44"></label>
-						</div>
-						<a href="" class="order-btn">Указать адрес доставки</a>
-						<div class="step-3">
-							<div class="step-left-column form-column">
-								<p class="form-title">Куда отправить ваш заказ?</p>
-								<p class="form-column-p">Введите ваши контактные данные:</p>
-								<input type="text" name>
-								<input type="text" name="mail">
-								<div class="form-phone-block"></div>
-								<input type="text" name="country">
-								<input type="text" name="city">
-								<input type="text" name="address">
-								<p class="step-left-column-p">Исползьуйте промокод <span class="promo-code">Titan1</span></p>
-								<input type="text" name="promo-code">
-								<p class="step-column-p">Введите промокод, что бы сэкономить 1000 рублей</p>
-								<button type="submit" class="order-btn">Заказать</button>
-								<div class="step-right-column info-column">
-									<div class="ordered-model-info-block">
-										<div class="ordered-model-info-block__left-column">
-											<img src="" alt="" class="ordered-model-img">
-											<div class="ordered-model-info-block__right-column">
-												<p class="ordered-model-name"></p>
-												<p class="ordered-model-size"></p>
-												<p class="ordered-model-price"></p>
-											</div>
-										</div>
-										<div class="delivery-info">
-											<p class="delivery-heading">БЕСПЛАТНАЯ ДОСТАВКА ПО ВСЕМУ СНГ</p>
-											<p class="info-column-p">Все заказы мы доставляем курьерской службой сдэк прямо по вашему адресу</p>
-											<p class="info-column-p">Доставка в любой город снг занимает от 1 до 3 дней в зависимости от загруженности курьеров</p>
-											<p class="info-column-p">Курьер предварительно позвонит вам, для уточнения удобного для вас времени доставки</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-	
-    				
-    			</form>
-    		</div>
-    	</div>
+        <div class="cart-overlay">
+            <div class="cart-tabs-block">
+                <div class="tab-1 cart-tab">
+                    <p class="tab-num">1</p>
+                    <p class="tab-description">Выберите модель</p>
+                </div>
+                <div class="tab-1 cart-tab">
+                    <p class="tab-num">2</p>
+                    <p class="tab-description">Выберите размер</p>
+                </div>
+                <div class="tab-1 cart-tab">
+                    <p class="tab-num">3</p>
+                    <p class="tab-description">Укажите адрес доставки</p>
+                </div>
+            </div>
+            <div class="cart-block">
+                <form action="#" method="post">
+                    <div class="slider-block"> </div>
+                    <div class="step-1"> <label class="model-choose"><input type="radio" class="model-choose-input" name="model" value="1"></label> <label class="model-choose"><input type="radio" class="model-choose-input" name="model" value="2" checked=""></label> <label class="model-choose"><input type="radio" class="model-choose-input" name="model" value="3"></label> <label class="model-choose"><input type="radio" class="model-choose-input" name="model" value="4"></label> <label class="model-choose"><input type="radio" class="model-choose-input" name="model" value="5"></label> <label class="model-choose"><input type="radio" class="model-choose-input" name="model" value="6"></label> </div> <a href="" class="order-btn">Выберите свой размер</a>
+                    <div class="step-2"> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="38"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="39"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="39.5"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="40"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="40.5"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="41"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="41.5"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="42" checked=""></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="42.5"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="43"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="43.5"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="44"></label> </div> <a href="" class="order-btn">Указать адрес доставки</a>
+                    <div class="step-3">
+                        <div class="step-left-column form-column">
+                            <p class="form-title">Куда отправить ваш заказ?</p>
+                            <p class="form-column-p">Введите ваши контактные данные:</p> <input type="text" name> <input type="text" name="mail">
+                            <div class="form-phone-block"></div> <input type="text" name="country"> <input type="text" name="city"> <input type="text" name="address">
+                            <p class="step-left-column-p">Исползьуйте промокод <span class="promo-code">Titan1</span></p> <input type="text" name="promo-code">
+                            <p class="step-column-p">Введите промокод, что бы сэкономить 1000 рублей</p> <button type="submit" class="order-btn">Заказать</button>
+                            <div class="step-right-column info-column">
+                                <div class="ordered-model-info-block">
+                                    <div class="ordered-model-info-block__left-column"> <img src="" alt="" class="ordered-model-img">
+                                        <div class="ordered-model-info-block__right-column">
+                                            <p class="ordered-model-name"></p>
+                                            <p class="ordered-model-size"></p>
+                                            <p class="ordered-model-price"></p>
+                                        </div>
+                                    </div>
+                                    <div class="delivery-info">
+                                        <p class="delivery-heading">БЕСПЛАТНАЯ ДОСТАВКА ПО ВСЕМУ СНГ</p>
+                                        <p class="info-column-p">Все заказы мы доставляем курьерской службой сдэк прямо по вашему адресу</p>
+                                        <p class="info-column-p">Доставка в любой город снг занимает от 1 до 3 дней в зависимости от загруженности курьеров</p>
+                                        <p class="info-column-p">Курьер предварительно позвонит вам, для уточнения удобного для вас времени доставки</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script>
-    $('.slider__list').slick({
-        dots: true
-    });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
