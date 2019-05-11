@@ -9,11 +9,10 @@ body {
 }
 
 .container {
-    width: 100%;
+    width: 97%;
     max-width: 1140px;
     margin: 0 auto;
     display: flex;
-    padding: 0 15px;
     justify-content: space-between;
 }
 
@@ -56,23 +55,21 @@ header .container {
     color: #fff;
     background: #68d000;
     text-align: center;
-
     box-shadow: 0px 0px 21px 0px rgba(102, 204, 0, 0.49);
-
-        border-radius: 6px;
-        margin: 0 auto;
-        text-transform: uppercase;
+    border-radius: 6px;
+    margin: 0 auto;
+    text-transform: uppercase;
     width: 82.5%;
     padding: 28px 0;
     font-size: 1.22rem;
     letter-spacing: .5px;
 }
 
-.call-me-btn {
+.call-me-btn, .fourth-section .order-btn {
     width: 180px;
     font-size: 12px;
     border-radius: 50px;
-        padding: 18px 0;
+    padding: 18px 0;
 }
 
 .first-section {
@@ -207,14 +204,14 @@ header .container {
 }
 
 .video-block,.main-video {
-    width: 960px;
+    max-width: 960px;
+    width: 100%;
     margin: 0 auto;
     margin-top: -130px;
 }
 
 .second-section .order-btn {
     margin-top: 60px;
-
 }
 
 .second-section__price {
@@ -246,6 +243,7 @@ header .container {
     width: 60%;
     text-align: center;
     margin-top: 0;
+    margin-bottom: 50px;
     letter-spacing: .6px;
 }
 
@@ -261,55 +259,160 @@ header .container {
     justify-content: space-between;
 }
 
+.review:not(:first-child) {
+    margin-top: 34px;
+}
+
 .review-video {
     max-width: 390px;
 }
 
 .reviews-block__review-column {
     max-width: 625px;
+    padding-top: 18px;
 }
 
 .review:nth-child(2n) .reviews-block__review-column {
-    
+    order: -1;
 }
 
 .review-column_name {
+    margin-bottom: 10px;
 }
 
 .review-column_years {
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 0;
 }
 
 .review-column_review {
+    margin-top: 25px;
+    font-size: 0.89rem;
+    line-height: 1.6;
+    padding: 43px 50px;
+    font-style: italic;
+    position: relative;
+    background: #f6f6f6;
+}
+
+.review-column_review::after {
+    content: "\201e";
+    position: absolute;
+    top: -80px;
+    color: #ffff00;
+    right: 5px;
+    font-family: SANS-SERIF;
+    padding: 0;
+    font-size: 100px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.third-section .order-btn {
+    margin-top: 30px;
 }
 
 .fourth-section {
 }
 
 .functions-section {
+    position: relative;
+    padding: 54.6% 0 0;
+}
+
+.fourth-section .order-btn {
+    width: 200px;
+    padding: 20px 0;
+    font-size: 0.85rem;
 }
 
 .functions-img {
+    /* height: 100%; */
+    width: 100%;
+    width: 112.5%;
+    position: absolute;
+    left: -20.6%;
+    top: 78px;
 }
 
 .functions-section-container {
+    position: relative;
+    color: #fff;
+    bottom: 62px;
+    display: flex;
 }
 
 .functionals-block-column {
+    padding-left: 3%;
+    width: 61.1%;
+    position: relative;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: flex-end;
 }
 
 .functionals-block-p {
+    font-size: 5.38vw;
+    margin-top: 0;
+    font-family: Roboto;
+    margin-bottom: 0;
+    font-weight: 500;
+    letter-spacing: -1px;
 }
 
 .protection {
+    position: absolute;
+    margin: 0;
+    color: #000;
+    width: 250px;
+    text-align: center;
+    top: 24px;
+    right: -21px;
+    background: #ffff00;
+    padding: 7px 0px 7px 0px;
 }
 
 .order-column {
+    width: auto;
+    margin-left: 8.8%;
+    align-self: center;
+}
+
+footer {
+    background-image: url(../img/footer-bg.jpg);
+    background-size: cover;
+    margin-top: 70px;
+    text-align: center;
+    padding: 25px 0;
 }
 
 .credits {
+    font-size: .85rem;
+    font-weight: 300;
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.credits::after {
+    content: "";
+    position: relative;
+    bottom: -32px;
+    background: #fff;
+    width: 57%;
+    height: 1px;
 }
 
 .payment_methods {
+    display: flex;
+    justify-content: space-around;
+    width: 32%;
+    margin: 0 auto;
+    margin-top: 70px;
 }
 
 .payment-icon {
@@ -319,6 +422,7 @@ header .container {
 }
 
 .hide-block {
+    display: none;
 }
 
 .cart-overlay {
