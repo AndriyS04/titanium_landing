@@ -55,3 +55,131 @@ $(document).ready(function() {
         $('.timer-daysc2').text(days[1]);
     }, 1000);
 });
+
+
+var cart_open_btn = document.querySelectorAll('.cart-open-btn'),
+    cart_popup = document.querySelector('.cart-popup'),
+    close_btn = document.querySelector('.close-btn');
+for (var i = 0; i < cart_open_btn.length; i++) {
+    cart_open_btn[i].addEventListener('click', function(ev) {
+        ev.preventDefault();
+
+        cart_popup.classList.remove('hide-block');
+        cart_popup.style.overflowY = 'scroll';
+        cart_popup.style.overflowX = 'hidden';
+        choose_step[0].checked = true;
+    });
+}
+
+close_btn.addEventListener('click', function(ev) {
+    ev.preventDefault();
+    cart_popup.classList.add('hide-block');
+});
+
+// закрытие окна при клике по фону
+cart_popup.addEventListener('click', function(ev) {
+    if (ev.target === cart_popup) {
+        cart_popup.classList.add('hide-block');
+    }
+});
+
+window.addEventListener("keydown", function(event) {
+    if (event.keyCode === 27) {
+        if (!cart_popup.classList.contains('hide-block')) { cart_popup.classList.add('hide-block') };
+
+    }
+});
+
+var sliders = document.querySelectorAll('.slider-item'),
+    model = document.querySelectorAll('.model-choose-input'),
+    choose_size_btn = document.querySelector('.choose-size-btn'),
+    choose_step = document.querySelectorAll('.step-radio'),
+    cart_tabs_block = document.querySelector('.cart-tabs-block');
+    choose_size = document.querySelectorAll('.size-choose-input'),
+    slider_block = document.querySelector('.slider-block'),
+    choose_address_btn = document.querySelector('.choose-address-btn'),
+    step_2 = document.querySelector('.step-2'),
+    step_1_2 = document.querySelector('.step-1-2'),
+    step_3 = document.querySelector('.step-3'),
+    ordered_model_name = document.querySelector('.ordered-model-name'),
+    ordered_model_size = document.querySelector('.ordered-model-size'),
+    ordered_model_price = document.querySelector('.ordered-model-price'),
+    count = model.length;
+
+
+    for (var i = 0; i < count; i++) {
+        model[i].addEventListener('change', show_slider(i));
+    }
+
+
+
+choose_size_btn.addEventListener('click', function(ev) {
+    ev.preventDefault();
+    step_2.classList.remove('hide-block');
+    slider_block.style.top = '-788px';
+    choose_size_btn.classList.add('active');
+    choose_step[1].checked = true;
+    choose_step[1].disabled = false;
+    if (window.width < 740) {
+            cart_tabs_block.style.left = '-320px';
+        }
+    choose_address_btn.classList.remove('disabled');
+});
+
+choose_address_btn.addEventListener('click', function(ev) {
+    ev.preventDefault();
+    if (!choose_address_btn.classList.contains('disabled')) {
+        step_1_2.classList.add('hide-block');
+        slider_block.classList.add('hide-block');
+        step_3.classList.remove('hide-block');
+        choose_step[2].checked = true;
+        choose_step[2].disabled = false;
+        
+
+        if (window.width < 740) {
+            cart_tabs_block.style.left = '-470px';
+        }
+
+        // показ выбранной модели
+        for (var i = 0; i < count; i++) {
+            if (model[i].checked) {
+                var choosen_model = model[i];
+            }
+            
+        }
+        for (var f = 0; f < choose_size.length; f++) {
+            if (choose_size[f].checked == true) {
+                var choosen_size = choose_size[f];
+                console.log(choose_size[f]);
+            }
+        }
+
+       ordered_model_size.innerHTML = choosen_size.dataset.value;
+
+    }
+});
+
+for (var k = 0; k < choose_step.length - 1; k++) {
+    choose_step[k].addEventListener('change', function() {
+        step_1_2.classList.remove('hide-block');
+        slider_block.classList.remove('hide-block');
+        step_3.classList.add('hide-block');
+        choose_step[2].checked = false;
+        choose_step[2].disabled = true;
+        if (window.width < 740) {
+            cart_tabs_block.style.left = '-320px';
+        }
+    });
+}
+
+function show_slider(i) {
+    return function(ev) {
+        for (var j = 0; j < sliders.length; j++) {
+            sliders[j].classList.add('hide-block');
+        }
+        if (model[i].checked == true) {
+            sliders[i].classList.remove('hide-block');
+        }
+    }
+
+}

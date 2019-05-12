@@ -8,6 +8,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -17,7 +19,7 @@
             <div class="logo"> <img src="img/logo.png" alt="Titanium">
                 <!--TITANIUM <sub class="copied">&#x00ae</sub>-->
             </div>
-            <div class="contact-block"> <a href="" class="contact-phone">+7 (499) 686 12 87</a> <a href="" class="order-btn call-me-btn">ПЕРЕЗВОНИТЕ МНЕ!</a> </div>
+            <div class="contact-block"> <a href="" class="contact-phone">+7 (499) 686 12 87</a> <a href="" class="order-btn call-me-btn cart-open-btn">ПЕРЕЗВОНИТЕ МНЕ!</a> </div>
         </div>
     </header>
     <main>
@@ -63,7 +65,7 @@
                 <div class="video-block">
                     <video class="main-video" src="img/Official.mp4" poster="img/video-poster.jpg" onclick="this.paused?this.play():this.pause();"></video>
                 </div>
-                <a href="" class="order-btn">Заказать себе, пару по уникальной цене</a>
+                <a href="" class="order-btn cart-open-btn">Заказать себе, пару по уникальной цене</a>
                 <p class="second-section__price">ВСЕГО ЗА 5499 &#x20bd</p>
             </div>
         </section>
@@ -72,8 +74,8 @@
                 <p class="reviews-section-heading">Сомневаешся в их удобстве и уровне защиты?</p>
                 <p class="reviews-section-second-heading">Посмотри,что говорят те, кто уже купил кроссовки Titan</p>
                 <div class="reviews-block">
-                    <div class="reviev-1 review">
-                        <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/reviev-1-poster.jpg">
+                    <div class="review-1 review">
+                        <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/review-1-poster.jpg">
                                 <source src="" type="video/mp4">
                                 <source src="" type="video/ogg"> </video> </div>
                         <div class="reviews-block__review-column">
@@ -82,8 +84,8 @@
                             <p class="review-column_review">Отлично подходит для повседневной носки! Я работаю по 12 часов в сутки, и мне нужна была обувь, которая была бы удобной и защитной!</p>
                         </div>
                     </div>
-                    <div class="reviev-2 review">
-                        <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/reviev-2-poster.jpg">
+                    <div class="review-2 review">
+                        <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/review-2-poster.jpg">
                                 <source src="" type="video/mp4">
                                 <source src="" type="video/ogg"> </video> </div>
                         <div class="reviews-block__review-column">
@@ -92,8 +94,8 @@
                             <p class="review-column_review">Обувь со стальным носком, которую я раньше носил, была тяжелой и неудобной. Но эта обувь отличается от предыдущей. Она отлично сидит на ноге и очень удобная.</p>
                         </div>
                     </div>
-                    <div class="reviev-3 review">
-                        <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/reviev-3-poster.jpg">
+                    <div class="review-3 review">
+                        <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/review-3-poster.jpg">
                                 <source src="" type="video/mp4">
                                 <source src="" type="video/ogg"> </video> </div>
                         <div class="reviews-block__review-column">
@@ -102,8 +104,8 @@
                             <p class="review-column_review">Я женщина, купила обувь, потому что дешевая и необычная. Она реально крутая, на работе не устаю и ноги дышат. Рекомендую.</p>
                         </div>
                     </div>
-                    <div class="reviev-4 review">
-                        <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/reviev-4-poster.jpg">
+                    <div class="review-4 review">
+                        <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/review-4-poster.jpg">
                                 <source src="" type="video/mp4">
                                 <source src="" type="video/ogg"> </video> </div>
                         <div class="reviews-block__review-column">
@@ -112,8 +114,8 @@
                             <p class="review-column_review">Эта обувь ПОТРЯСАЮЩАЯ!!! Когда я надел ее в первый раз, то носил ее целый день, не снимая. Нога не устает. ЛУЧШАЯ защитная обувь, которую я когда-либо носил. Закажу еще одну пару!</p>
                         </div>
                     </div>
-                    <div class="reviev-5 review">
-                        <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/reviev-5-poster.jpg">
+                    <div class="review-5 review">
+                        <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/review-5-poster.jpg">
                                 <source src="" type="video/mp4">
                                 <source src="" type="video/ogg"> </video> </div>
                         <div class="reviews-block__review-column">
@@ -122,8 +124,8 @@
                             <p class="review-column_review">Работаю на автосервисе. Купил себе эту обувь и безумно рад. Нога дышит легко - после старых ботинок.</p>
                         </div>
                     </div>
-                    <div class="reviev-6 review">
-                        <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/reviev-6-poster.jpg">
+                    <div class="review-6 review">
+                        <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/review-6-poster.jpg">
                                 <source src="" type="video/mp4">
                                 <source src="" type="video/ogg"> </video> </div>
                         <div class="reviews-block__review-column">
@@ -132,16 +134,19 @@
                             <p class="review-column_review">Купила для себя эти кросовки и ни очем не жалею. Ноге удобно, легко и даже в жару не потеют. Советую теперь всем друзьям!!!</p>
                         </div>
                     </div>
-                </div> <a href="" class="order-btn">Заказать себе, пару по уникальной цене</a>
+                </div> <a href="" class="order-btn cart-open-btn">Заказать себе, пару по уникальной цене</a>
             </div>
         </section>
-        <section class="fourth-section functions-section"> <img src="img/functions.jpg" alt="" class="functions-img">
+        <section class="fourth-section functions-section">
+            <img src="img/functions.jpg" alt="" class="functions-img">
+            <img src="img/functions-mobile.jpg" class="functions-img-mobile" alt="">
             <div class="functions-section-container">
+                <img src="img/functions-mobile-2.jpg" class="functions-img-mobile-2" alt="">
                 <div class="functionals-block-column">
                     <p class="functionals-block-p">ФУНКЦИОНАЛЬНОСТЬ</p>
                     <p class="protection">Обеспечивает защиту</p>
                 </div>
-                <div class="order-column"> <a href="" class="order-btn">Заказать!</a> </div>
+                <div class="order-column"> <a href="" class="order-btn cart-open-btn">Заказать!</a> </div>
             </div>
         </section>
     </main>
@@ -222,55 +227,262 @@
     <div class="cart-popup hide-block">
         <div class="cart-overlay">
             <div class="cart-tabs-block">
-                <div class="tab-1 cart-tab">
+                <input type="radio" id="step-radio-1" class="step-radio" name="step" value="step-1" checked="">
+                <label for="step-radio-1" class="tab-1 cart-tab">
                     <p class="tab-num">1</p>
                     <p class="tab-description">Выберите модель</p>
-                </div>
-                <div class="tab-1 cart-tab">
+                    
+                </label>
+                <input type="radio" id="step-radio-2" class="step-radio" name="step" value="step-2" disabled="">
+                <label for="step-radio-2" class="tab-1 cart-tab">
                     <p class="tab-num">2</p>
                     <p class="tab-description">Выберите размер</p>
-                </div>
-                <div class="tab-1 cart-tab">
+                    
+                </label>
+                 <input type="radio" id="step-radio-3" class="step-radio" name="step" value="step-3" disabled="">
+                <label for="step-radio-3" class="tab-1 cart-tab">
                     <p class="tab-num">3</p>
                     <p class="tab-description">Укажите адрес доставки</p>
-                </div>
+                   
+                </label>
             </div>
             <div class="cart-block">
-                <form action="#" method="post">
-                    <div class="slider-block"> </div>
-                    <div class="step-1"> <label class="model-choose"><input type="radio" class="model-choose-input" name="model" value="1"></label> <label class="model-choose"><input type="radio" class="model-choose-input" name="model" value="2" checked=""></label> <label class="model-choose"><input type="radio" class="model-choose-input" name="model" value="3"></label> <label class="model-choose"><input type="radio" class="model-choose-input" name="model" value="4"></label> <label class="model-choose"><input type="radio" class="model-choose-input" name="model" value="5"></label> <label class="model-choose"><input type="radio" class="model-choose-input" name="model" value="6"></label> </div> <a href="" class="order-btn">Выберите свой размер</a>
-                    <div class="step-2"> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="38"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="39"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="39.5"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="40"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="40.5"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="41"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="41.5"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="42" checked=""></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="42.5"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="43"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="43.5"></label> <label class="size-choose"><input type="radio" class="size-choose-input" name="size" value="44"></label> </div> <a href="" class="order-btn">Указать адрес доставки</a>
-                    <div class="step-3">
+                <form class="cart-form" action="#" method="post">
+                    <div class="slider-block">
+                        <div class="slider-1 slider-item hide-block">
+                            <div data-thumb="img/models/model-1-1.jpg"><img src="img/models/model-1-1.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-1-2.jpg"><img src="img/models/model-1-2.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-1-3.jpg"><img src="img/models/model-1-3.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-1-4.jpg"><img src="img/models/model-1-4.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-1-5.jpg"><img src="img/models/model-1-5.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-1-6.jpg"><img src="img/models/model-1-6.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-1-7.jpg"><img src="img/models/model-1-7.jpg" alt=""></div>
+                        </div>
+                        <div class="slider-2 slider-item">
+                            <div data-thumb="img/models/model-2-1.jpg"><img src="img/models/model-2-1.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-2-2.jpg"><img src="img/models/model-2-2.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-2-3.jpg"><img src="img/models/model-2-3.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-2-4.jpg"><img src="img/models/model-2-4.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-2-5.jpg"><img src="img/models/model-2-5.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-2-6.jpg"><img src="img/models/model-2-6.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-2-7.jpg"><img src="img/models/model-2-7.jpg" alt=""></div>
+                        </div>
+                        <div class="slider-3 slider-item hide-block">
+                            <div data-thumb="img/models/model-3-1.jpg"><img src="img/models/model-3-1.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-3-2.jpg"><img src="img/models/model-3-2.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-3-3.jpg"><img src="img/models/model-3-3.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-3-4.jpg"><img src="img/models/model-3-4.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-3-5.jpg"><img src="img/models/model-3-5.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-3-6.jpg"><img src="img/models/model-3-6.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-3-7.jpg"><img src="img/models/model-3-7.jpg" alt=""></div>
+                        </div>
+                        <div class="slider-4 slider-item hide-block">
+                            <div data-thumb="img/models/model-4-1.jpg"><img src="img/models/model-4-1.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-4-1.jpg"><img src="img/models/model-4-1.jpg" alt=""></div>
+                        </div>
+                        <div class="slider-5 slider-item hide-block">
+                            <div data-thumb="img/models/model-5-1.jpg"><img src="img/models/model-5-1.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-5-2.jpg"><img src="img/models/model-5-2.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-5-3.jpg"><img src="img/models/model-5-3.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-5-4.jpg"><img src="img/models/model-5-4.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-5-5.jpg"><img src="img/models/model-5-5.jpg" alt=""></div>
+
+                        </div>
+                        <div class="slider-6 slider-item hide-block">
+                            <div data-thumb="img/models/model-6-1.jpg"><img src="img/models/model-6-1.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-6-2.jpg"><img src="img/models/model-6-2.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-6-3.jpg"><img src="img/models/model-6-3.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-6-4.jpg"><img src="img/models/model-6-4.jpg" alt=""></div>
+                            <div data-thumb="img/models/model-6-5.jpg"><img src="img/models/model-6-5.jpg" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="steps-block">
+                        <div class="step-1-2">
+                            <div class="step-1">
+                                <input id="model-choose-1" type="radio" class="model-choose-input" name="model" value="1">
+                                <label for="model-choose-1" class="model-choose model-1"></label>
+                                <input id="model-choose-2" type="radio" class="model-choose-input" name="model" value="2" checked="">
+                                <label for="model-choose-2" class="model-choose model-2"></label>
+                                <input id="model-choose-3" type="radio" class="model-choose-input" name="model" value="3">
+                                <label for="model-choose-3" class="model-choose model-3"></label>
+                                <input id="model-choose-4" type="radio" class="model-choose-input" name="model" value="4">
+                                <label for="model-choose-4" class="model-choose model-4"></label>
+                                <input id="model-choose-5" type="radio" class="model-choose-input" name="model" value="5">
+                                <label for="model-choose-5" class="model-choose model-5"></label>
+                                <input id="model-choose-6" type="radio" class="model-choose-input" name="model" value="6">
+                                <label for="model-choose-6" class="model-choose model-6"></label>
+                            </div>
+                            <a href="" class="order-btn choose-size-btn">Выберите свой размер</a>
+                            <div class="step-2 hide-block">
+                                    <input id="size-38" type="radio" class="size-choose-input" name="size" value="38">
+                                <label class="size-choose" for="size-38">
+                                    38
+                                </label>
+                                    <input id="size-39" type="radio" class="size-choose-input" name="size" value="39">
+                                <label class="size-choose" for="size-39">
+                                    39
+                                </label>
+                                    <input id="size-39-5" type="radio" class="size-choose-input" name="size" value="39.5">
+                                <label class="size-choose" for="size-39-5">
+                                    39.5
+                                </label>
+                                    <input id="size-40" type="radio" class="size-choose-input" name="size" value="40">
+                                <label class="size-choose" for="size-40">
+                                    40
+                                </label>
+                                    <input id="size-40-5" type="radio" class="size-choose-input" name="size" value="40.5">
+                                <label class="size-choose" for="size-40-5">
+                                    40.5
+                                </label>
+                                    <input id="size-41" data-value="US8 | EU41 | UK7.5 " type="radio" class="size-choose-input" name="size" value="41">
+                                <label class="size-choose" for="size-41">
+                                    41
+                                </label>
+                                    <input id="size-41-5" type="radio" class="size-choose-input" name="size" value="41.5">
+                                <label class="size-choose" for="size-41-5">
+                                    41.5
+                                </label>
+                                    <input id="size-42" data-value="US8.5 | EU42 | UK8 " type="radio" class="size-choose-input" name="size" value="42" checked="">
+                                <label class="size-choose" for="size-42">
+                                    42
+                                    </label>
+                                    <input id="size-42-5" type="radio" class="size-choose-input" name="size" value="42.5">
+                                <label class="size-choose" for="size-42-5">
+                                    42.5
+                                </label>
+                                    <input id="size-43" data-value="US9.5 | EU43 | UK9 " type="radio" class="size-choose-input" name="size" value="43">
+                                <label class="size-choose" for="size-43">
+                                    43
+                                </label>
+                                    <input id="size-43-5" type="radio" class="size-choose-input" name="size" value="43.5">
+                                <label class="size-choose" for="size-43-5">
+                                    43.5
+                                </label>
+                                    <input id="size-44" data-value="US10 | EU44 | UK9.5 " type="radio" class="size-choose-input" name="size" value="44">
+                                <label class="size-choose" for="size-44">
+                                    44
+                                </label>
+                            </div>
+                            <a class="order-btn choose-address-btn disabled">Указать адрес доставки</a>
+                        </div>
+                    </div>
+                    <div class="step-3 hide-block">
                         <div class="step-left-column form-column">
                             <p class="form-title">Куда отправить ваш заказ?</p>
-                            <p class="form-column-p">Введите ваши контактные данные:</p> <input type="text" name> <input type="text" name="mail">
-                            <div class="form-phone-block"></div> <input type="text" name="country"> <input type="text" name="city"> <input type="text" name="address">
-                            <p class="step-left-column-p">Исползьуйте промокод <span class="promo-code">Titan1</span></p> <input type="text" name="promo-code">
-                            <p class="step-column-p">Введите промокод, что бы сэкономить 1000 рублей</p> <button type="submit" class="order-btn">Заказать</button>
-                            <div class="step-right-column info-column">
-                                <div class="ordered-model-info-block">
-                                    <div class="ordered-model-info-block__left-column"> <img src="" alt="" class="ordered-model-img">
-                                        <div class="ordered-model-info-block__right-column">
-                                            <p class="ordered-model-name"></p>
-                                            <p class="ordered-model-size"></p>
-                                            <p class="ordered-model-price"></p>
-                                        </div>
+                            <p class="form-column-p">Введите ваши контактные данные:</p>
+                            <input class="cart-form-input" type="text" name="name" placeholder="Ваше имя" required>
+                            <input class="cart-form-input" type="text" name="mail" placeholder="Ваш email" required>
+                            <div class="form-phone-block">
+                                <select class="cart-form-input phone-code-select" name="phonde-code" required>
+                                    <option value="" disabled selected>code</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                    <option value="">6</option>
+                                </select>
+                                <input class="cart-form-input" type="tel" name="phone" placeholder="XXX XXX XXX" required>
+                            </div>
+                            <select class="cart-form-input country-select" type="text" name="country" placeholder="Страна" required>
+                                <option value="" disabled selected>Страна</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                            </select>
+                            <input class="cart-form-input city-input" type="text" name="city" placeholder="Город" required>
+                            <input class="cart-form-input" type="text" name="address" placeholder="Адрес" required>
+                            <p class="step-left-column-p">Исползьуйте промокод <span class="promo-code">Titan1</span></p>
+                            <input class="cart-form-input promo-input" type="text" name="promo-code" placeholder="ХХХХХХ">
+                            <p class="step-column-p">Введите промокод, что бы сэкономить 1000 рублей</p>
+                            <button type="submit" class="order-btn">Заказать</button>
+                        </div>
+                        <div class="step-right-column info-column">
+                            <div class="ordered-model-info-block">
+                                <div class="ordered-model-info-block__left-column">
+                                    <img src="img/models/model-2-1.jpg" alt="" class="ordered-model-img">
+                                    <div class="ordered-model-info-block__right-column">
+                                        <p class="ordered-model-name">Battlefield Camouflage Blue</p>
+                                        <p class="ordered-model-size">US8 | EU41 | UK7.5</p>
+                                        <p class="ordered-model-price">3950.00 руб</p>
                                     </div>
-                                    <div class="delivery-info">
-                                        <p class="delivery-heading">БЕСПЛАТНАЯ ДОСТАВКА ПО ВСЕМУ СНГ</p>
-                                        <p class="info-column-p">Все заказы мы доставляем курьерской службой сдэк прямо по вашему адресу</p>
-                                        <p class="info-column-p">Доставка в любой город снг занимает от 1 до 3 дней в зависимости от загруженности курьеров</p>
-                                        <p class="info-column-p">Курьер предварительно позвонит вам, для уточнения удобного для вас времени доставки</p>
-                                    </div>
+                                </div>
+                                <div class="delivery-info">
+                                    <p class="delivery-heading">БЕСПЛАТНАЯ ДОСТАВКА ПО ВСЕМУ СНГ</p>
+                                    <p class="info-column-p">Все заказы мы доставляем курьерской службой сдэк прямо по вашему адресу</p>
+                                    <p class="info-column-p">Доставка в любой город снг занимает от 1 до 3 дней в зависимости от загруженности курьеров</p>
+                                    <p class="info-column-p">Курьер предварительно позвонит вам, для уточнения удобного для вас времени доставки</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </form>
             </div>
+            </form>
+            <a href="#" class="close-btn">×</a>
         </div>
     </div>
+    </div>
     <script src="js/script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(".slider-1").slick({
+    autoplay: true,
+    dots: true,
+    initialSlide: 2,
+    customPaging : function(slider, i) {
+        var thumb = $(slider.$slides[i]).data('thumb');
+        return '<a><img src="'+thumb+'"></a>';
+    },
+});
+        $(".slider-2").slick({
+    autoplay: true,
+    dots: true,
+    initialSlide: 2,
+    customPaging : function(slider, i) {
+        var thumb = $(slider.$slides[i]).data('thumb');
+        return '<a><img src="'+thumb+'"></a>';
+    },
+});
+        $(".slider-3").slick({
+    autoplay: true,
+    dots: true,
+    initialSlide: 2,
+    customPaging : function(slider, i) {
+        var thumb = $(slider.$slides[i]).data('thumb');
+        return '<a><img src="'+thumb+'"></a>';
+    },
+});
+        $(".slider-4").slick({
+    autoplay: true,
+    dots: true,
+    initialSlide: 2,
+    customPaging : function(slider, i) {
+        var thumb = $(slider.$slides[i]).data('thumb');
+        return '<a><img src="'+thumb+'"></a>';
+    },
+});
+        $(".slider-5").slick({
+    autoplay: true,
+    dots: true,
+    initialSlide: 2,
+    customPaging : function(slider, i) {
+        var thumb = $(slider.$slides[i]).data('thumb');
+        return '<a><img src="'+thumb+'"></a>';
+    },
+});
+        $(".slider-6").slick({
+    autoplay: true,
+    dots: true,
+    initialSlide: 2,
+    customPaging : function(slider, i) {
+        var thumb = $(slider.$slides[i]).data('thumb');
+        return '<a><img src="'+thumb+'"></a>';
+    },
+});
+    </script>
 </body>
 
 </html>
