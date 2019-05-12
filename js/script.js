@@ -67,26 +67,28 @@ for (var i = 0; i < cart_open_btn.length; i++) {
         cart_popup.classList.remove('hide-block');
         cart_popup.style.overflowY = 'scroll';
         cart_popup.style.overflowX = 'hidden';
-        choose_step[0].checked = true;
+        document.body.style.overflow = 'hidden';
     });
 }
 
 close_btn.addEventListener('click', function(ev) {
     ev.preventDefault();
     cart_popup.classList.add('hide-block');
+    document.body.style.overflow = 'scroll';
 });
 
 // закрытие окна при клике по фону
 cart_popup.addEventListener('click', function(ev) {
     if (ev.target === cart_popup) {
         cart_popup.classList.add('hide-block');
+        document.body.style.overflow = 'scroll';
     }
 });
 
 window.addEventListener("keydown", function(event) {
     if (event.keyCode === 27) {
-        if (!cart_popup.classList.contains('hide-block')) { cart_popup.classList.add('hide-block') };
-
+        if (!cart_popup.classList.contains('hide-block')) { cart_popup.classList.add('hide-block');
+            document.body.style.overflow = 'scroll'; };
     }
 });
 
@@ -94,7 +96,7 @@ var sliders = document.querySelectorAll('.slider-item'),
     model = document.querySelectorAll('.model-choose-input'),
     choose_size_btn = document.querySelector('.choose-size-btn'),
     choose_step = document.querySelectorAll('.step-radio'),
-    cart_tabs_block = document.querySelector('.cart-tabs-block');
+    cart_tabs_block = document.querySelector('.cart-tabs-block'),
     choose_size = document.querySelectorAll('.size-choose-input'),
     slider_block = document.querySelector('.slider-block'),
     choose_address_btn = document.querySelector('.choose-address-btn'),
@@ -104,25 +106,29 @@ var sliders = document.querySelectorAll('.slider-item'),
     ordered_model_name = document.querySelector('.ordered-model-name'),
     ordered_model_size = document.querySelector('.ordered-model-size'),
     ordered_model_price = document.querySelector('.ordered-model-price'),
+    ordered_model_img = document.querySelector('.ordered-model-img'),
     count = model.length;
 
 
-    for (var i = 0; i < count; i++) {
-        model[i].addEventListener('change', show_slider(i));
-    }
+for (var i = 0; i < count; i++) {
+    model[i].addEventListener('change', show_slider(i));
+}
 
 
 
 choose_size_btn.addEventListener('click', function(ev) {
     ev.preventDefault();
     step_2.classList.remove('hide-block');
+    if (window.innerWidth < 430) {
+        slider_block.style.top = '-798px';
+    }
     slider_block.style.top = '-788px';
     choose_size_btn.classList.add('active');
     choose_step[1].checked = true;
     choose_step[1].disabled = false;
-    if (window.width < 740) {
-            cart_tabs_block.style.left = '-320px';
-        }
+    if (window.innerWidth < 700) {
+        cart_tabs_block.style.left = '-320px';
+    }
     choose_address_btn.classList.remove('disabled');
 });
 
@@ -134,28 +140,26 @@ choose_address_btn.addEventListener('click', function(ev) {
         step_3.classList.remove('hide-block');
         choose_step[2].checked = true;
         choose_step[2].disabled = false;
-        
 
-        if (window.width < 740) {
+        if (window.innerWidth < 700) {
             cart_tabs_block.style.left = '-470px';
         }
 
         // показ выбранной модели
         for (var i = 0; i < count; i++) {
-            if (model[i].checked) {
-                var choosen_model = model[i];
+            if (model[i].checked == true) {
+                ordered_model_name.innerHTML = model[i].dataset.name;
+                ordered_model_price.innerHTML = model[i].dataset.price;
+                ordered_model_img.src = model[i].dataset.img;
             }
-            
+
         }
         for (var f = 0; f < choose_size.length; f++) {
             if (choose_size[f].checked == true) {
-                var choosen_size = choose_size[f];
-                console.log(choose_size[f]);
+                ordered_model_size.innerHTML = choose_size[f].dataset.value;
             }
         }
-
-       ordered_model_size.innerHTML = choosen_size.dataset.value;
-
+        window.location.hash="step-3-anc";
     }
 });
 
@@ -166,7 +170,7 @@ for (var k = 0; k < choose_step.length - 1; k++) {
         step_3.classList.add('hide-block');
         choose_step[2].checked = false;
         choose_step[2].disabled = true;
-        if (window.width < 740) {
+        if (window.innerWidth < 700) {
             cart_tabs_block.style.left = '-320px';
         }
     });
