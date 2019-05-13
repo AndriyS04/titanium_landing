@@ -59,7 +59,10 @@ $(document).ready(function() {
 
 var cart_open_btn = document.querySelectorAll('.cart-open-btn'),
     cart_popup = document.querySelector('.cart-popup'),
-    close_btn = document.querySelector('.close-btn');
+    call_me_popup = document.querySelector('.call-me-popup'),
+    all_popup = document.querySelectorAll('.popup'),
+    call_me_btn = document.querySelector('.call-me-btn'),
+    close_btn = document.querySelectorAll('.close-btn');
 for (var i = 0; i < cart_open_btn.length; i++) {
     cart_open_btn[i].addEventListener('click', function(ev) {
         ev.preventDefault();
@@ -70,26 +73,12 @@ for (var i = 0; i < cart_open_btn.length; i++) {
         document.body.style.overflow = 'hidden';
     });
 }
-
-close_btn.addEventListener('click', function(ev) {
-    ev.preventDefault();
-    cart_popup.classList.add('hide-block');
-    document.body.style.overflow = 'scroll';
-});
-
-// закрытие окна при клике по фону
-cart_popup.addEventListener('click', function(ev) {
-    if (ev.target === cart_popup) {
-        cart_popup.classList.add('hide-block');
-        document.body.style.overflow = 'scroll';
-    }
-});
-
-window.addEventListener("keydown", function(event) {
-    if (event.keyCode === 27) {
-        if (!cart_popup.classList.contains('hide-block')) { cart_popup.classList.add('hide-block');
-            document.body.style.overflow = 'scroll'; };
-    }
+call_me_btn.addEventListener('click', function(ev) {
+	ev.preventDefault();
+	call_me_popup.classList.remove('hide-block');
+	call_me_popup.style.overflowY = 'scroll';
+        call_me_popup.style.overflowX = 'hidden';
+        document.body.style.overflow = 'hidden';
 });
 
 var sliders = document.querySelectorAll('.slider-item'),
@@ -119,17 +108,15 @@ for (var i = 0; i < count; i++) {
 choose_size_btn.addEventListener('click', function(ev) {
     ev.preventDefault();
     step_2.classList.remove('hide-block');
-    if (window.innerWidth < 430) {
-        slider_block.style.top = '-798px';
-    }
-    slider_block.style.top = '-788px';
+
     choose_size_btn.classList.add('active');
     choose_step[1].checked = true;
     choose_step[1].disabled = false;
-    if (window.innerWidth < 700) {
-        cart_tabs_block.style.left = '-320px';
-    }
+
     choose_address_btn.classList.remove('disabled');
+        if (window.innerWidth > 980) {
+    choose_address_btn.style.marginBottom = '170px';
+  }
 });
 
 choose_address_btn.addEventListener('click', function(ev) {
@@ -141,9 +128,7 @@ choose_address_btn.addEventListener('click', function(ev) {
         choose_step[2].checked = true;
         choose_step[2].disabled = false;
 
-        if (window.innerWidth < 700) {
-            cart_tabs_block.style.left = '-470px';
-        }
+
 
         // показ выбранной модели
         for (var i = 0; i < count; i++) {
@@ -159,7 +144,8 @@ choose_address_btn.addEventListener('click', function(ev) {
                 ordered_model_size.innerHTML = choose_size[f].dataset.value;
             }
         }
-        window.location.hash="step-3-anc";
+
+        //window.location.hash="step-3-anc";
     }
 });
 
@@ -170,11 +156,28 @@ for (var k = 0; k < choose_step.length - 1; k++) {
         step_3.classList.add('hide-block');
         choose_step[2].checked = false;
         choose_step[2].disabled = true;
-        if (window.innerWidth < 700) {
-            cart_tabs_block.style.left = '-320px';
-        }
     });
 }
+
+for (var j=0; j<close_btn.length; j++) {
+close_btn[j].addEventListener('click', close_popup(j));
+};
+
+
+// закрытие окна при клике по фону
+overlay_close(cart_popup);
+overlay_close(call_me_popup);
+
+
+window.addEventListener("keydown", function(event) {
+    if (event.keyCode === 27) {
+        if (!cart_popup.classList.contains('hide-block') || !call_me_popup.classList.contains('hide-block')) {
+         		cart_popup.classList.add('hide-block');
+         		call_me_popup.classList.add('hide-block');
+            document.body.style.overflow = 'scroll';
+          };
+    }
+});
 
 function show_slider(i) {
     return function(ev) {
@@ -185,5 +188,22 @@ function show_slider(i) {
             sliders[i].classList.remove('hide-block');
         }
     }
-
 }
+
+function close_popup(j) {
+return function(ev) {
+    ev.preventDefault();
+    all_popup[j].classList.add('hide-block');
+    document.body.style.overflow = 'scroll';
+  }
+}
+
+function overlay_close(popup) {
+	popup.addEventListener('click', function(ev) {
+    if (ev.target === popup) {
+        popup.classList.add('hide-block');
+        document.body.style.overflow = 'scroll';
+    }
+});
+}
+

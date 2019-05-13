@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/intlTelInput.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -19,7 +20,7 @@
             <div class="logo"> <img src="img/logo.png" alt="Titanium">
                 <!--TITANIUM <sub class="copied">&#x00ae</sub>-->
             </div>
-            <div class="contact-block"> <a href="tel:+74996861287" class="contact-phone">+7 (499) 686 12 87</a> <a href="" class="order-btn call-me-btn cart-open-btn">ПЕРЕЗВОНИТЕ МНЕ!</a> </div>
+            <div class="contact-block"> <a href="tel:+74996861287" class="contact-phone">+7 (499) 686 12 87</a> <a href="" class="order-btn call-me-btn">ПЕРЕЗВОНИТЕ МНЕ!</a> </div>
         </div>
     </header>
     <main>
@@ -66,7 +67,7 @@
                     <video class="main-video" src="img/Official.mp4" poster="img/video-poster.jpg" onclick="this.paused?this.play():this.pause();"></video>
                 </div>
                 <a href="" class="order-btn cart-open-btn">Заказать себе, пару по уникальной цене</a>
-                <p class="second-section__price">ВСЕГО ЗА 5499 &#x20bd</p>
+                <p class="second-section__price">ВСЕГО ЗА 5499 &#x20bd;</p>
             </div>
         </section>
         <section class="third-section reviews-section">
@@ -77,7 +78,8 @@
                     <div class="review-1 review">
                         <div class="reviews-block__video-column"> <video class="review-video" src="" poster="img/review-1-poster.jpg">
                                 <source src="" type="video/mp4">
-                                <source src="" type="video/ogg"> </video> </div>
+                                <source src="" type="video/ogg"> </video>
+                        </div>
                         <div class="reviews-block__review-column">
                             <p class="review-column_name">Александр Знак</p>
                             <p class="review-column_years">42 года</p>
@@ -224,30 +226,27 @@
                 <path d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z" fill="#142688"></path>
             </svg></div>
     </footer>
-    <div class="cart-popup hide-block">
+    <div class="cart-popup hide-block popup">
         <div class="cart-overlay">
             <div class="cart-tabs-block">
                 <input type="radio" id="step-radio-1" class="step-radio" name="step" value="step-1" checked="">
                 <label for="step-radio-1" class="tab-1 cart-tab">
-                    <p class="tab-num">1</p>
-                    <p class="tab-description">Выберите модель</p>
-                    
+                    <span class="tab-num">1</span>
+                    <span class="tab-description">Выберите модель</span>
                 </label>
                 <input type="radio" id="step-radio-2" class="step-radio" name="step" value="step-2" disabled="">
-                <label for="step-radio-2" class="tab-1 cart-tab">
-                    <p class="tab-num">2</p>
-                    <p class="tab-description">Выберите размер</p>
-                    
+                <label for="step-radio-2" class="tab-2 cart-tab">
+                    <span class="tab-num">2</span>
+                    <span class="tab-description">Выберите размер</span>
                 </label>
-                 <input type="radio" id="step-radio-3" class="step-radio" name="step" value="step-3" disabled="">
-                <label for="step-radio-3" class="tab-1 cart-tab">
-                    <p class="tab-num">3</p>
-                    <p class="tab-description">Укажите адрес доставки</p>
-                   
+                <input type="radio" id="step-radio-3" class="step-radio" name="step" value="step-3" disabled="">
+                <label for="step-radio-3" class="tab-3 cart-tab">
+                    <span class="tab-num">3</span>
+                    <span class="tab-description">Укажите адрес доставки</span>
                 </label>
             </div>
             <div class="cart-block">
-                <form class="cart-form" action="#" method="post">
+                <form class="cart-form" action="#" method="post" name="order-form">
                     <div class="slider-block">
                         <div class="slider-1 slider-item hide-block">
                             <div data-thumb="img/models/model-1-1.jpg"><img src="img/models/model-1-1.jpg" alt=""></div>
@@ -286,7 +285,6 @@
                             <div data-thumb="img/models/model-5-3.jpg"><img src="img/models/model-5-3.jpg" alt=""></div>
                             <div data-thumb="img/models/model-5-4.jpg"><img src="img/models/model-5-4.jpg" alt=""></div>
                             <div data-thumb="img/models/model-5-5.jpg"><img src="img/models/model-5-5.jpg" alt=""></div>
-
                         </div>
                         <div class="slider-6 slider-item hide-block">
                             <div data-thumb="img/models/model-6-1.jpg"><img src="img/models/model-6-1.jpg" alt=""></div>
@@ -314,51 +312,51 @@
                             </div>
                             <a href="" class="order-btn choose-size-btn">Выберите свой размер</a>
                             <div class="step-2 hide-block">
-                                    <input id="size-38" data-value="US6 | EU38 | UK5.5" type="radio" class="size-choose-input" name="size" value="38">
+                                <input id="size-38" data-value="US6 | EU38 | UK5.5" type="radio" class="size-choose-input" name="size" value="38">
                                 <label class="size-choose" for="size-38">
                                     38
                                 </label>
-                                    <input id="size-39" data-value="US6.5 | EU39 | UK6" type="radio" class="size-choose-input" name="size" value="39">
+                                <input id="size-39" data-value="US6.5 | EU39 | UK6" type="radio" class="size-choose-input" name="size" value="39">
                                 <label class="size-choose" for="size-39">
                                     39
                                 </label>
-                                    <input id="size-39-5" data-value="US6.5 | EU39.5 | UK6"  type="radio" class="size-choose-input" name="size" value="39.5">
+                                <input id="size-39-5" data-value="US6.5 | EU39.5 | UK6" type="radio" class="size-choose-input" name="size" value="39.5">
                                 <label class="size-choose" for="size-39-5">
                                     39.5
                                 </label>
-                                    <input id="size-40" data-value="US7 | EU40 | UK6.5" type="radio" class="size-choose-input" name="size" value="40">
+                                <input id="size-40" data-value="US7 | EU40 | UK6.5" type="radio" class="size-choose-input" name="size" value="40">
                                 <label class="size-choose" for="size-40">
                                     40
                                 </label>
-                                    <input id="size-40-5" data-value="US7 | EU40.5 | UK6.5" type="radio" class="size-choose-input" name="size" value="40.5">
+                                <input id="size-40-5" data-value="US7 | EU40.5 | UK6.5" type="radio" class="size-choose-input" name="size" value="40.5">
                                 <label class="size-choose" for="size-40-5">
                                     40.5
                                 </label>
-                                    <input id="size-41" data-value="US8 | EU41 | UK7.5" type="radio" class="size-choose-input" name="size" value="41">
+                                <input id="size-41" data-value="US8 | EU41 | UK7.5" type="radio" class="size-choose-input" name="size" value="41">
                                 <label class="size-choose" for="size-41">
                                     41
                                 </label>
-                                    <input id="size-41-5" data-value="US8 | EU41.5 | UK7.5" type="radio" class="size-choose-input" name="size" value="41.5">
+                                <input id="size-41-5" data-value="US8 | EU41.5 | UK7.5" type="radio" class="size-choose-input" name="size" value="41.5">
                                 <label class="size-choose" for="size-41-5">
                                     41.5
                                 </label>
-                                    <input id="size-42" data-value="US8.5 | EU42 | UK8 " type="radio" class="size-choose-input" name="size" value="42" checked="">
+                                <input id="size-42" data-value="US8.5 | EU42 | UK8 " type="radio" class="size-choose-input" name="size" value="42" checked="">
                                 <label class="size-choose" for="size-42">
                                     42
-                                    </label>
-                                    <input id="size-42-5" data-value="US8.5 | EU42.5 | UK8 " type="radio" class="size-choose-input" name="size" value="42.5">
+                                </label>
+                                <input id="size-42-5" data-value="US8.5 | EU42.5 | UK8 " type="radio" class="size-choose-input" name="size" value="42.5">
                                 <label class="size-choose" for="size-42-5">
                                     42.5
                                 </label>
-                                    <input id="size-43" data-value="US9.5 | EU43 | UK9 " type="radio" class="size-choose-input" name="size" value="43">
+                                <input id="size-43" data-value="US9.5 | EU43 | UK9 " type="radio" class="size-choose-input" name="size" value="43">
                                 <label class="size-choose" for="size-43">
                                     43
                                 </label>
-                                    <input id="size-43-5" data-value="US9.5 | EU43.5 | UK9 " type="radio" class="size-choose-input" name="size" value="43.5">
+                                <input id="size-43-5" data-value="US9.5 | EU43.5 | UK9 " type="radio" class="size-choose-input" name="size" value="43.5">
                                 <label class="size-choose" for="size-43-5">
                                     43.5
                                 </label>
-                                    <input id="size-44" data-value="US10 | EU44 | UK9.5 " type="radio" class="size-choose-input" name="size" value="44">
+                                <input id="size-44" data-value="US10 | EU44 | UK9.5 " type="radio" class="size-choose-input" name="size" value="44">
                                 <label class="size-choose" for="size-44">
                                     44
                                 </label>
@@ -368,38 +366,33 @@
                     </div>
                     <div class="step-3 hide-block">
                         <div class="step-left-column form-column">
-                            <p class="form-title"  id="step-3-anc">Куда отправить ваш заказ?</p>
+                            <p class="form-title" id="step-3-anc">Куда отправить ваш заказ?</p>
                             <p class="form-column-p">Введите ваши контактные данные:</p>
                             <input class="cart-form-input" type="text" name="name" placeholder="Ваше имя" required>
                             <input class="cart-form-input" type="text" name="mail" placeholder="Ваш email" required>
                             <div class="form-phone-block">
-                                <label class="phone-code-select-wrapper">
-                                    <select class="cart-form-input phone-code-select" name="phonde-code" required>
-                                        <option value="38" data-imagesrc="img/ua-code.jpg" class="ua-code" disabled selected>
-                                        </option>
-                                        <option value="">1</option>
-                                        <option value="">2</option>
-                                        <option value="">3</option>
-                                        <option value="">4</option>
-                                        <option value="">5</option>
-                                        <option value="">6</option>
+                                <input type="tel" id="phone" class="cart-form-input phone-code-select"> 
+                                <input class="cart-form-input" type="tel" name="phone" placeholder="499 686-12-87" required>
+                            </div>
+                            <div class="country-block">
+                                <label class="select-country-wrapper">
+                                    <select class="cart-form-input country-select" name="country">
+                                        <option value="Украина">Украина</option>
+                                        <option value="Российская Федерация">Российская Федерация</option>
+                                        <option value="Беларусь">Беларусь</option>
+                                        <option value="Кыргызстан">Кыргызстан</option>
+                                        <option value="Таджикистан">Таджикистан</option>
+                                        <option value="Узбекистан">Узбекистан</option>
+                                        <option value="Туркменистан">Туркменистан</option>
+                                        <option value="Молдова">Молдова</option>
+                                        <option value="Азербайджан">Азербайджан</option>
+                                        <option value="Армения">Армения</option>
+                                        <option value="Казахстан">Казахстан</option>
                                     </select>
                                 </label>
-                                <input class="cart-form-input" type="tel" name="phone" placeholder="XXX XXX XXX" required>
+                                <input class="cart-form-input city-input" type="text" name="city" placeholder="Город">
                             </div>
-                            <label class="select-country-wrapper">
-                                <select class="cart-form-input country-select" type="text" name="country" placeholder="Страна" required>
-                                    <option value="" disabled selected>Страна</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
-                                    <option value="">6</option>
-                                </select>
-                            </label>
-                            <input class="cart-form-input city-input" type="text" name="city" placeholder="Город" required>
-                            <input class="cart-form-input" type="text" name="address" placeholder="Адрес" required>
+                            <input class="cart-form-input" type="text" name="address" placeholder="Адрес">
                             <p class="step-left-column-p">Исползьуйте промокод <span class="promo-code">Titan1</span></p>
                             <input class="cart-form-input promo-input" type="text" name="promo-code" placeholder="ХХХХХХ">
                             <p class="step-column-p">Введите промокод, что бы сэкономить 1000 рублей</p>
@@ -429,75 +422,90 @@
             <a href="#" class="close-btn">×</a>
         </div>
     </div>
+    <div class="call-me-popup popup hide-block">
+        <form class="call-me-form" action="#" method="post" name="call-me-form">
+            <p class="call-me-p">Оставьте Ваш номер и мы Вам перезвоним</p>
+            <input class="call-me-input" type="text" name="name" placeholder="Ваше имя">
+            <input class="call-me-input" type="tel" name="mail" placeholder="Ваш номер" required="">
+            <input class="call-me-input" type="tel" name="mail" placeholder="Ваш номер" required>
+            <input class="call-me-input" type="tel" name="mail" placeholder="Ваш номер" required>
+            <input class="call-me-input" type="tel" name="mail" placeholder="Ваш номер" required>
+            <input class="call-me-input" type="tel" name="mail" placeholder="Ваш номер" required>
+            <button type="submit" class="order-btn">Отправить</button>
+            <a href="#" class="close-btn">×</a>
+        </form>
     </div>
     <script src="js/script.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-     <script type="text/javascript" src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
     <script>
-        $(".slider-1").slick({
-    autoplay: true,
-    dots: true,
-    initialSlide: 2,
-    customPaging : function(slider, i) {
-        var thumb = $(slider.$slides[i]).data('thumb');
-        return '<a><img src="'+thumb+'"></a>';
-    },
-});
-        $(".slider-2").slick({
-    autoplay: true,
-    dots: true,
-    initialSlide: 2,
-    customPaging : function(slider, i) {
-        var thumb = $(slider.$slides[i]).data('thumb');
-        return '<a><img src="'+thumb+'"></a>';
-    },
-});
-        $(".slider-3").slick({
-    autoplay: true,
-    dots: true,
-    initialSlide: 2,
-    customPaging : function(slider, i) {
-        var thumb = $(slider.$slides[i]).data('thumb');
-        return '<a><img src="'+thumb+'"></a>';
-    },
-});
-        $(".slider-4").slick({
-    autoplay: true,
-    dots: true,
-    initialSlide: 2,
-    customPaging : function(slider, i) {
-        var thumb = $(slider.$slides[i]).data('thumb');
-        return '<a><img src="'+thumb+'"></a>';
-    },
-});
-        $(".slider-5").slick({
-    autoplay: true,
-    dots: true,
-    initialSlide: 2,
-    customPaging : function(slider, i) {
-        var thumb = $(slider.$slides[i]).data('thumb');
-        return '<a><img src="'+thumb+'"></a>';
-    },
-});
-        $(".slider-6").slick({
-    autoplay: true,
-    dots: true,
-    initialSlide: 2,
-    customPaging : function(slider, i) {
-        var thumb = $(slider.$slides[i]).data('thumb');
-        return '<a><img src="'+thumb+'"></a>';
-    },
-});
-
-
-        $('.phone-code-select').ddslick({
-            width: 70,
-            background: '#fff',
-    onSelected: function(selectedData){        
-    }   
-});
+    $(".slider-1").slick({
+        autoplay: true,
+        dots: true,
+        initialSlide: 2,
+        customPaging: function(slider, i) {
+            var thumb = $(slider.$slides[i]).data('thumb');
+            return '<a><img src="' + thumb + '"></a>';
+        },
+    });
+    $(".slider-2").slick({
+        autoplay: true,
+        dots: true,
+        initialSlide: 2,
+        customPaging: function(slider, i) {
+            var thumb = $(slider.$slides[i]).data('thumb');
+            return '<a><img src="' + thumb + '"></a>';
+        },
+    });
+    $(".slider-3").slick({
+        autoplay: true,
+        dots: true,
+        initialSlide: 2,
+        customPaging: function(slider, i) {
+            var thumb = $(slider.$slides[i]).data('thumb');
+            return '<a><img src="' + thumb + '"></a>';
+        },
+    });
+    $(".slider-4").slick({
+        autoplay: true,
+        dots: true,
+        initialSlide: 2,
+        customPaging: function(slider, i) {
+            var thumb = $(slider.$slides[i]).data('thumb');
+            return '<a><img src="' + thumb + '"></a>';
+        },
+    });
+    $(".slider-5").slick({
+        autoplay: true,
+        dots: true,
+        initialSlide: 2,
+        customPaging: function(slider, i) {
+            var thumb = $(slider.$slides[i]).data('thumb');
+            return '<a><img src="' + thumb + '"></a>';
+        },
+    });
+    $(".slider-6").slick({
+        autoplay: true,
+        dots: true,
+        initialSlide: 2,
+        customPaging: function(slider, i) {
+            var thumb = $(slider.$slides[i]).data('thumb');
+            return '<a><img src="' + thumb + '"></a>';
+        },
+    });
     </script>
-
+    <script src="js/intlTelInput.min.js"></script>
+    <script>
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+        initialCountry: "auto",
+        geoIpLookup: function(success, failure) {
+            $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+                var countryCode = (resp && resp.country) ? resp.country : "";
+                success(countryCode);
+            });
+        },
+    });
+    </script>
 </body>
 
 </html>
