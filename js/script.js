@@ -159,9 +159,6 @@ choose_address_btn.addEventListener('click', function(ev) {
 promo_input.addEventListener('change', function() {
     promo_input_value = promo_input.value.toLowerCase();
     if (promo_input_value === 'titan1') {
-        /*	price_before_discont = parseInt(ordered_model_price.innerHTML);
-        	price_with_discont = price_before_discont - 1000;
-        	if (sale <) */
         ordered_model_price.innerHTML = parseInt(ordered_model_price.innerHTML) - 1000 + '.00 руб';
         promo_input.disabled = true;
     }
