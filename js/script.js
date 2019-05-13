@@ -63,22 +63,23 @@ var cart_open_btn = document.querySelectorAll('.cart-open-btn'),
     all_popup = document.querySelectorAll('.popup'),
     call_me_btn = document.querySelector('.call-me-btn'),
     close_btn = document.querySelectorAll('.close-btn');
+
+
+
 for (var i = 0; i < cart_open_btn.length; i++) {
     cart_open_btn[i].addEventListener('click', function(ev) {
         ev.preventDefault();
 
         cart_popup.classList.remove('hide-block');
         cart_popup.style.overflowY = 'scroll';
-        cart_popup.style.overflowX = 'hidden';
-        document.body.style.overflow = 'hidden';
     });
 }
 call_me_btn.addEventListener('click', function(ev) {
-	ev.preventDefault();
-	call_me_popup.classList.remove('hide-block');
-	call_me_popup.style.overflowY = 'scroll';
-        call_me_popup.style.overflowX = 'hidden';
-        document.body.style.overflow = 'hidden';
+    ev.preventDefault();
+    call_me_popup.classList.remove('hide-block');
+    call_me_popup.style.overflowY = 'scroll';
+    call_me_popup.style.overflowX = 'hidden';
+    document.body.style.overflow = 'hidden';
 });
 
 var sliders = document.querySelectorAll('.slider-item'),
@@ -96,7 +97,9 @@ var sliders = document.querySelectorAll('.slider-item'),
     ordered_model_size = document.querySelector('.ordered-model-size'),
     ordered_model_price = document.querySelector('.ordered-model-price'),
     ordered_model_img = document.querySelector('.ordered-model-img'),
-    count = model.length;
+    promo_input = document.querySelector('.promo-input'),
+    promo_input_value;
+count = model.length;
 
 
 for (var i = 0; i < count; i++) {
@@ -114,9 +117,9 @@ choose_size_btn.addEventListener('click', function(ev) {
     choose_step[1].disabled = false;
 
     choose_address_btn.classList.remove('disabled');
-        if (window.innerWidth > 980) {
-    choose_address_btn.style.marginBottom = '170px';
-  }
+    if (window.innerWidth > 980) {
+        choose_address_btn.style.marginBottom = '170px';
+    }
 });
 
 choose_address_btn.addEventListener('click', function(ev) {
@@ -134,7 +137,13 @@ choose_address_btn.addEventListener('click', function(ev) {
         for (var i = 0; i < count; i++) {
             if (model[i].checked == true) {
                 ordered_model_name.innerHTML = model[i].dataset.name;
-                ordered_model_price.innerHTML = model[i].dataset.price;
+                promo_input_value = promo_input.value.toLowerCase();
+                console.log(promo_input_value);
+                if (promo_input_value === 'titan1') {
+                    ordered_model_price.innerHTML = (+model[i].dataset.price - 1000) + '.00 руб';
+                } else {
+                    ordered_model_price.innerHTML = model[i].dataset.price + '.00 руб';
+                }
                 ordered_model_img.src = model[i].dataset.img;
             }
 
@@ -144,10 +153,19 @@ choose_address_btn.addEventListener('click', function(ev) {
                 ordered_model_size.innerHTML = choose_size[f].dataset.value;
             }
         }
-
-        //window.location.hash="step-3-anc";
     }
 });
+
+promo_input.addEventListener('change', function() {
+    promo_input_value = promo_input.value.toLowerCase();
+    if (promo_input_value === 'titan1') {
+        /*	price_before_discont = parseInt(ordered_model_price.innerHTML);
+        	price_with_discont = price_before_discont - 1000;
+        	if (sale <) */
+        ordered_model_price.innerHTML = parseInt(ordered_model_price.innerHTML) - 1000 + '.00 руб';
+        promo_input.disabled = true;
+    }
+})
 
 for (var k = 0; k < choose_step.length - 1; k++) {
     choose_step[k].addEventListener('change', function() {
@@ -159,8 +177,11 @@ for (var k = 0; k < choose_step.length - 1; k++) {
     });
 }
 
-for (var j=0; j<close_btn.length; j++) {
-close_btn[j].addEventListener('click', close_popup(j));
+
+
+
+for (var j = 0; j < close_btn.length; j++) {
+    close_btn[j].addEventListener('click', close_popup(j));
 };
 
 
@@ -172,10 +193,10 @@ overlay_close(call_me_popup);
 window.addEventListener("keydown", function(event) {
     if (event.keyCode === 27) {
         if (!cart_popup.classList.contains('hide-block') || !call_me_popup.classList.contains('hide-block')) {
-         		cart_popup.classList.add('hide-block');
-         		call_me_popup.classList.add('hide-block');
+            cart_popup.classList.add('hide-block');
+            call_me_popup.classList.add('hide-block');
             document.body.style.overflow = 'scroll';
-          };
+        };
     }
 });
 
@@ -191,19 +212,18 @@ function show_slider(i) {
 }
 
 function close_popup(j) {
-return function(ev) {
-    ev.preventDefault();
-    all_popup[j].classList.add('hide-block');
-    document.body.style.overflow = 'scroll';
-  }
+    return function(ev) {
+        ev.preventDefault();
+        all_popup[j].classList.add('hide-block');
+        document.body.style.overflow = 'scroll';
+    }
 }
 
 function overlay_close(popup) {
-	popup.addEventListener('click', function(ev) {
-    if (ev.target === popup) {
-        popup.classList.add('hide-block');
-        document.body.style.overflow = 'scroll';
-    }
-});
+    popup.addEventListener('click', function(ev) {
+        if (ev.target === popup) {
+            popup.classList.add('hide-block');
+            document.body.style.overflow = 'scroll';
+        }
+    });
 }
-
